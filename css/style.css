@@ -1,0 +1,335 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt"0;
+    box-sizing: border-box;
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+::selection {
+    color: #fff;
+    background-color: #333;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+
+/* Start Header */
+header {
+    background-color: #333;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav h2 .logo {
+    display: block;
+    font-size: 32px;
+    color: white;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+header nav h2 .logo:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+header .links ul {
+    position: absolute;
+    display: none;
+    background-color: #e2e2e2;
+    min-width: 150px;
+    top: calc(100% + 7px);
+    right: 0;
+    z-index: 10;
+}
+
+header .links ul::before {
+    content: "";
+    position: absolute;
+    border-color: transparent transparent #e2e2e2 transparent;
+    border-width: 10px;
+    border-style: solid;
+    top: -20px;
+    right: 5px;
+}
+
+header .links ul li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    border-bottom: 1px solid #333;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+header .links ul li a:hover {
+    padding-left: 25px;
+}
+
+header .links ul li:last-child a {
+    border-bottom: 0;
+}
+
+header .links {
+    position: relative;
+}
+
+header .links:hover ul {
+    display: block;
+}
+
+header .icons {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header .icons span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+}
+
+header .icons span:nth-child(2) {
+    width: 65%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+header .icons:hover span:nth-child(2) {
+    width: 100%;
+}
+
+header .icons span:last-child {
+    height: 3px;
+}
+
+/* End Header */
+
+/* Staer About */
+#about {
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#about h1,
+#about p {
+    margin: 20px;
+}
+
+
+#about p::first-line {
+    font-weight: 900;
+}
+
+#about p {
+    font-weight: bold;
+}
+
+/* Start Skills */
+#skills {
+    background-color: #e2e2e2;
+}
+
+#skills ul {
+    list-style: disc;
+    padding-left: 50px;
+}
+
+
+#skills form {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+#skills form label {
+
+    display: block;
+}
+
+#skills form input[placeholder="Add More of Your Skiles"] {
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    outline: none;
+}
+
+#skills form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    width: 70px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+}
+
+
+#skills form input[type="submit"]:hover {
+    background-color: #0e0e0e;
+}
+
+/* End Skills */
+
+/* Start Projects */
+#projects {
+    background-color: #f4f4f4;
+}
+
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#projects .item {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+    .project {
+        display: block;
+    }
+}
+
+
+#projects .project p {
+    margin: 15px 0;
+}
+
+#projects .project h4 {
+    margin-bottom: 12.5px;
+}
+
+#projects .project h4 a {
+    display: inline-block;
+    text-decoration: underline;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#projects .project h4 a:hover {
+    transform: scale(1.16);
+    -webkit-transform: scale(1.16);
+    -moz-transform: scale(1.16);
+    -ms-transform: scale(1.16);
+    -o-transform: scale(1.16);
+}
+
+iframe {
+    width: 100%;
+    height: 50vh;
+}
+
+#contact {
+    background-color: #e2e2e2;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#contact form input ,
+#contact textarea {
+    width: calc(100% - 40px);
+    margin: 10px;
+    padding: 10px;
+}
+
+#contact form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    width: calc(100% - 15px);
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+#contact form input[type="submit"]:hover {
+    background-color: #0e0e0e;
+}
+
+
+footer {
+    text-align: center;
+    padding: 7px;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+footer p {
+    margin: 15px 0;
+}
